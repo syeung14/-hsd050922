@@ -1,0 +1,6 @@
+Kent Beck's 4 Rules for Simple Design:
+1. Passes all the test
+2. Reveals intention
+3. Removes duplication
+4. Fewest elements
+
