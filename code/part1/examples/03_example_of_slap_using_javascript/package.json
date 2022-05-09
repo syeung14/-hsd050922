@@ -1,0 +1,15 @@
+{
+  "name": "03_example_of_slap_using_javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "plato": "plato -r -d report src"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "plato": "^1.7.0"
+  }
+}
