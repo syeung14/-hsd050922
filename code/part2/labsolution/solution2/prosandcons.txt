@@ -24,6 +24,9 @@ There is no consistency in how TV, Fan, etc. provide the implementation. Some ma
 getRemote, some may call it getARemote, etc. To bring consistency, we may have to
 implement an interface.
 
+We had to implement the inner class in the TV. This can make the file bulky.
+In languages like C# we may use partial classes to keep the code in separate files or
+in languages like Kotlin we can use extension functions to achieve that as well.
 
 
 
