@@ -1,0 +1,69 @@
+Inheritance is the weakest link in OOP
+
+A number of dynamically typed languages like JavaScript, Python, Ruby, etc. do not care
+for inheritance to implement Polymorphism.
+
+You can call any method on an object if that object has that method. You don't have to
+conform to an interface or a class for this to work.
+
+Inheritance if generally required in statically typed languages as a way to realize
+polymorphism.
+
+Design by contract vs. design by a capability.
+Conformance      vs       can do
+
+Inheritance leads to tight coupling between a derived class and its base class.
+Rigid and hard to change.
+
+Considering various design patterns, is inheritance used more often or delegation used
+more often among design patterns?
+
+
+More design patterns use delegation instead of inheritance.
+
+Delegation comes in the form of association, aggregation or composition.
+ Association is relationship between two objects
+ Aggregation is where there is a part owner relationship
+ Composition is a stronger form of aggregation where the lifetime of the objects are tied
+
+
+You may delegate to something that is associated, aggregated, or is a composite of your object.
+
+Should we use inheritance or delegation?
+
+If an object of B wants to use an object of A, then use delegation.
+If an object of B may be used where an object of A is expected, then use inheritance.
+
+Use delegation for reuse and use inheritance for substitutability
+
+Suppose we have a LivingCreature and an Eraser.
+
+We want to create a EfficientErase. Should we use inheritance or delegation?
+Will we be expected to use an EfficientErase where an Eraser is expected. If yet use
+inheritance.
+
+We want to create an instructor who will be expected to erase the board while teaching.
+Should we use inheritance or delegation?
+
+Will we be expected to use an instructor as an eraser. I hope not!
+Use delegation.
+
+As an instructor I don't mind being asked to erase, but I don't want to be used as an eraser.
+
+To use vs. to be used as.
+
+Barbara Liskov's Substitution Principle (LSP):
+
+A user of a base class should *not* know the difference between using a base class instance
+or a derived class instance.
+
+The derived class services should require no more and promise no less than the corresponding services of the base class.
+
+If a user has to know the difference between being given a base instance vs. a derived instance, then they will have to check the instance type and take different actions. Thus violating LSP on our part will result in the users of our code violating OCP.
+
+LSP tells us not to use inheritance in a way that the users of the hierarchy will end up 
+violating OCP.
+
+
+Use inheritance not for reuse but for substitutability. Use delegation for reuse.
+
