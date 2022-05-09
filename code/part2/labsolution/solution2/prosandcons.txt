@@ -1,0 +1,35 @@
+
+Remote  (interface)
+                        Tv
+			   We will create a TV specfic Remote implementation
+       		        Fan
+			   We will create a Fan specfic Remote implementation
+		        ...
+
+What is good about this design?
+
+Remote is ultimately extensible
+We can have any number of remotes for a given TV insance, for example
+We can have a Remote be universal to control any device that provides an implementation
+for the Remote interface (as an inner class)
+No method collision
+we are not polluting the public interface of a TV, for example, with up and down
+We can provide special implementations and properties in TV's Remote implemention for example
+
+
+
+What needs to be improved?
+
+There is no consistency in how TV, Fan, etc. provide the implementation. Some may call it
+getRemote, some may call it getARemote, etc. To bring consistency, we may have to
+implement an interface.
+
+
+
+
+
+
+
+
+
+

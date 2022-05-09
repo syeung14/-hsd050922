@@ -1,0 +1,14 @@
+Observations from the given code:
+Remote has tight coupling to TV, Fan, etc. and is not extensible.
+
+We can have any number of remotes for a TV instance or a Fan instance, etc.
+A Remote may be used to control a TV, a Fan, etc. - universal remote (even though the current design is not extensible)
+
+
+Design idea:
+
+Create an interface (RemoteControlled) that will contain the common methods needed by
+the Remote and let TV, etc. implement it.
+
+May be another idea as well....
+

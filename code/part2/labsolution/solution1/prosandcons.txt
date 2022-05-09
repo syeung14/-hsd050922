@@ -1,0 +1,29 @@
+
+Remote  -------> RemoteControlled
+                 Tv, Fan, etc. implement RemoteControlled
+
+What is good about this design?
+Remote is extensible and is loosely coupled to TV, etc. via a RemoteControlled interface
+
+A TV instance, for example, may have multiple remotes if we like
+A remote is universal, without change it can control any device that implements RemoteControlled.
+
+What needs to be improved?
+TV, Fan, etc. sadly had to implement an interface just because remote wants it.
+In the future we may have to implement other no directly related interfaces because something else wants it
+
+The up and down are polluting the public interface of TV, Fan, etc. even though they are really useful from a Remote and not as much directly on the instance.
+
+It is possible that we may have method collision if muliple interfaces have the same methods, like up, but with different intent.
+
+What if we wanted some features specific for one remote, for example, a remote with a light, that we don't want for other remotes? Hard to implement that in the current design.
+
+
+
+
+
+
+
+
+
+
