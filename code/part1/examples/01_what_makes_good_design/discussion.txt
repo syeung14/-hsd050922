@@ -1,0 +1,74 @@
+What is design?
+
+Design is the mapping of concepts into the implementation detail.
+It is the mapping of ideas based the languages, libraries, frameworks, etc.
+
+Bridge between the domain and the implementation.
+
+What is a good design?
+-Easily extensible
+-Easy to understand
+  -easy to navigate
+-Easy to change
+-Readable
+-Easy to maintain
+-loosely coupled
+-it is relevant and serves the intended purpose
+  -supports business needs
+-self explanatory
+-easy to repeat
+-simple
+ -avoid unnecessary complexity
+-scalable
+-easy to test *****
+-easy to debug and to monitor
+-easy to deploy
+-modular
+-...
+
+Economic concerns and impact
+
+We want to lower the cost of change and also reduce the frequency of change.
+Cost effective.
+
+
+Characteristics of good design
+-Simple
+-Fewer moving parts
+-Relevant
+-highly cohesive
+-low and loose coupling
+
+Cohesion:
+Code that is narrow and focused, does one thing really well
+Like things are together and unlike things are apart
+Why?: The changes needs to be less frequent and thus the cost of change is minimized
+
+High cohesion means that like things are more together.
+Low cohesion means that things that do not belong together appears in one place.
+
+Strive for high cohesion.
+
+Coupling:
+Low instead of high coupling
+Loose instead of tight coupling
+
+
+Low coupling is where a piece of code depends on fewer things.
+Low coupling is a concern in *all* programming languages and environments.
+
+Why?: If we depend on more things our code will have to change more often. We want
+to minimize the frequency of change of different parts of an application.
+
+Tight coupling is where we depend on something that is concrete.  Loose coupling is
+where we depend on something that is abstract, like an interface.
+
+Interfaces are more stable than classes. Loose coupling, again, minimizes the frequency of change.
+
+Dynamically typed languages (Ruby, Python, JavaScript, etc.) naturally favor loose coupling.
+Statically typed languages (C++, Java, C#, Scala, etc.) need our effort to create loose coupling.
+
+Also, keep in mind that inheritance is tight coupling, so choose it wisely.
+
+Favor low coupling *and* also loose coupling.
+
