@@ -1,0 +1,16 @@
+Tight coupling makes code hard to test and hard to extend
+
+As much as possible favor low coupling and loose coupling to make the code extensible.
+
+Fewer things to depend on lowers the frequency change
+
+The more abstract a dependency is, the more stable the code is and the more extensible it
+is
+
+A word of caution:
+***We should not use these principles blindly and need to evaluate the trade offs and give due consideration to keep unnecessary complexity low.
+
+Think YAGNI
+
+Do not blindly create interface for every dependency.
+
