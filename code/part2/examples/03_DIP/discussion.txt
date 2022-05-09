@@ -1,0 +1,38 @@
+Dependency Inversion Principle (DIP)
+
+
+Human   --------> Clock
+
+Tight coupling. Concrete Human depends on a concrete Clock.
+
+But, what if the Human really wanted an alarm and not a clock.
+
+-----------------------------------------------------------------------------------
+
+Human  -------------> Alarm
+
+  Clock, Computer, SmartPhone, Microwave, TV, etc. may implement the Alarm interface
+
+
+We achieve loose coupling now.
+
+DIP says that a concrete class should not depend on another concrete class. Instead, both
+should depend on an interface.
+
+Interfaces represent loose coupling compared to dependencies on a class.
+
+The direction of dependency has been inverted. Instead of the Human depending on the
+Clock, with this change, both the Clock and the Human now depend on an interface Alarm.
+
+In stead of the dependency doing into the Clock, it now goes out of Clock - thus the
+direction of dependency has been inverted - DIP.
+
+Human ----> Clock
+
+to, after applying DIP,
+
+Human -----> Alarm <|----  Clock
+
+Human is now extensible for different types of Alarms and no longer forced to use a Clock
+if all they care about was an alarm.
+
