@@ -1,0 +1,82 @@
+Single Responsibility Principle (SRP):
+
+It really is about cohesion.
+
+The reason for change for a function or a class should be minimum
+
+SRP is really Single Reason for Change Principle (SRCP?)
+
+Why? We want to minimize the frequency of change and thus the cost.
+
+How can we tell if our code follows the SRP?
+
+What does the word "Responsibility" really mean?
+
+Some go to the extent to say that a function that has a if statement or a for loop or
+has multiple parameters fail SRP, but I don't agree with such extreme opinion.
+
+Instead of going that route, let us think about easy violations of SRP and get deeper into
+the understanding:
+
+
+Long functions or long method:
+
+Do you think writing long functions is a good idea?
+Yes / no
+
+Have you recently seen long functions at work?
+Yes / no
+
+Cognitive dissonance
+
+
+Why are long functions such a bad idea?
+-hard to understand (pain)
+-difficult to maintain
+-complex
+-Difficult to debug
+-hard to test
+-hard to read, hard to maintain
+-Really hard to change / extend later without causing new bugs
+-Parsing the code for human brain is difficult.
+-introduce bugs
+-hidden bugs
+-low cohesion   | diagonal opposite of good design 
+-high coupling  | that favor high cohesion and loose & low coupling
+-hard to reuse
+-leads to duplication
+-...
+
+But, how long is actually long?
+
+What about 10,000 lines? - of course, it is long...
+What about 1000 lines? long...
+What about 100 lines? hum.... some may say this is long
+What about 10 lines? hum.... hum.... most may say that is ok, but some may not agree...
+
+There is no standard for a long function?!
+
+Someone said "if you can fit the entire function in one screen, then it is not long"
+Then someone else asked "what is your font size?"
+
+It turns out that long functions should not be measured by the number of lines of code...
+
+It is not about the number of lines of code, it is about the level of abstraction or the
+level of details...
+
+If a function deals with multiple levels of details or levels of abstraction, then the
+cyclomatic complexity of the code is very high.
+
+A good function focuses in a single level of detail.
+Single Level of Abstraction Principle (SLAP)
+
+While SRP is really valuable, I like to focus more on SLAP than SRP.
+
+A long or a short function is not about the length of a function, it is about the
+number of levels of abstraction or details that the function focuses on.
+
+A 100 lines function may be OK if it focuses on a single level of abstraction.
+A 5 lines function may be not OK if it is focusing on multiple levels of abstraction
+
+Focus on abstraction and cyclomatic complexity
+
