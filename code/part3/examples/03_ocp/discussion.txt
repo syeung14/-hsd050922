@@ -1,0 +1,53 @@
+Open Closed Principle (OCP)
+
+"A software module must be open for extension but closed for modification." Bertrand Meyer
+
+It is more expensive to change a lot of existing code than to add a small new module.
+
+Abstraction and Polymorphism are the key to extensibility
+
+What is the most non-polymorphic keyword or function in languages like Java, C#, C++:
+
+The new keyword
+
+Why?
+
+new leads to tight coupling
+
+new Car() - we bind to a Car class here.
+
+An entire set of design patterns (like Abstract Factory, Factory Method, Prototype, etc.)
+and frameworks like Spring, have been created just to tackle new.
+
+The more we depend on new, the less extensible our code is.
+
+Furthermore, instanceof can be problem if we check for different types in the code.
+
+If we add a new type, we may have to change the code.
+
+In general, instanceof is not good for extensibility, but there are exceptions
+
+
+public boolean equals(Object other) {
+  if(other instanceof MyClass) {
+    ...
+  }
+
+  return false;
+}
+
+In the above code, use of instanceof does not violate OCP. If we add other types in the
+program, we don't have to change the equals method. The check is for our own class,
+not for multiple other classes.
+
+Ask if a code should depend on different types. If that is a reality, then design for
+loose coupling in that case to provide extensibility.
+
+
+
+
+
+
+
+
+
